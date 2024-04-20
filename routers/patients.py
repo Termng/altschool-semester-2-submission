@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends,status, HTTPException
 from random import randrange
 
-from schema.doctors import Doctors, doctors
+
 from schema.patients import Patient, patient, PatientUpdate
 
 patient_router = APIRouter(
