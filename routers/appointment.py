@@ -27,7 +27,7 @@ def complete_appointment(appointment_id: int, doctor_id: int):
     
 
 
-@appointment_router.delete("/{appointment_id}")
+@appointment_router.delete("/")
 def cancel_appointment(appointment_id: int, doctor_id: int):
     data = AppointmentService.cancel_appointment_resource(appointment_id, doctor_id)
     return {"Successful": data}

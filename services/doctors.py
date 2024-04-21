@@ -37,7 +37,7 @@ class DoctorService:
                 doctors.remove(person)
                 return {"message": f"the patient with the id {doctor_id} has been deleted"}
             
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail= f'the patient with  id: {doctor_id} does not exist in the database')
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail= f'the Doctor with  id: {doctor_id} does not exist in the database')
     
     
     @staticmethod
