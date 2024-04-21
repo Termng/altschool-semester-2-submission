@@ -7,6 +7,7 @@ class Appointment(BaseModel):
     id: int
     patient: Patient
     doctor: Doctors
+    status: str
     appointment_time: datetime
     
 

@@ -5,7 +5,14 @@ from routers.appointment import appointment_router
 
 
 app = FastAPI(
-    docs_url='/'
+    title="Medical Appointment App - OPEN API 3.0",
+    description="The application is to facilitate appointment bookings between Patients and Doctors",
+    docs_url="/",
+    contact={
+        "name": "Torah Chimdinma Felix Github",
+        "url": "https://github.com/Termng/altschool-semester-2-submission/",
+        "email": "torahfelix@gmail.com",
+    }
     
 )
 
@@ -13,6 +20,3 @@ app.include_router(patient_router)
 app.include_router(doctor_router)
 app.include_router(appointment_router)
 
-@app.get('/welcome')
-def index():
-    return {'message': 'This is Torahs application'}

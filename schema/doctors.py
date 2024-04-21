@@ -1,5 +1,3 @@
-# Doctors: id, name, specialization, phone, is_available (defaults to True)
-
 from pydantic import BaseModel
 from enum import Enum
 
@@ -31,6 +29,10 @@ class DoctorStatus(BaseModel):
     
 
 doctors: list[Doctors] = [
-    Doctors(id=1, name="Falomo", specialization= "Anesthesiology", phone= "+2347037152720", is_available= Status.is_available),
-    Doctors(id=2, name="Aderinokun", specialization= "Dermatology", phone= "+2347061703817", is_available= Status.not_available)
+    Doctors(id=1, name="Okafor", specialization="Pediatrics", phone="+2347012345678", is_available=Status.is_available),
+    Doctors(id=2, name="Adebayo", specialization="Cardiology", phone="+2348098765432", is_available=Status.is_available),
+    Doctors(id=3, name="Eze", specialization="Neurology", phone="+2347087654321", is_available=Status.is_available),
+    Doctors(id=4, name="Abubakar", specialization="Orthopedics", phone="+2348123456789", is_available=Status.not_available),
+    Doctors(id=5, name="Ogunleye", specialization="Ophthalmology", phone="+2348023456789", is_available=Status.is_available),
+    Doctors(id=6, name="Nwosu", specialization="Psychiatry", phone="+2348056789123", is_available=Status.is_available)
 ]
